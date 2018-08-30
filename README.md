@@ -1,6 +1,15 @@
 ### react-demo
 
-记录react和配置webpack中的问题。
+#### 项目目的
+
+记录配置webpack和学习react中的问题。
+
+#### 运行命令
+
+```
+开发：npm start
+构建：npm run build
+```
 
 #### webpack3升4问题 错误提示及解决办法
 
@@ -166,15 +175,15 @@ render(
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Home from '../containers/Home';
+import App from '../containers/App';
 import List from '../containers/List';
 import Todo from '../containers/Todo';
 import Hello from '../containers/Hello';
 
-const App = () => (
+const RouterMap = () => (
   <Router>
     <div>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={App} />
       <Route path="/list" component={List} />
       <Route path="/todo" component={Todo} />
       <Route path="/hello" component={Hello} />
@@ -182,13 +191,13 @@ const App = () => (
   </Router>
 );
 
-export default App;
+export default RouterMap;
 
-// home.jsx  主页面配置跳转链接
+// App.jsx  主页面配置跳转链接
 import React from 'react';
 import { Link } from "react-router-dom";
 
-class Home extends React.Component{
+class App extends React.Component{
     render(){
         return(
             <div>
@@ -203,5 +212,5 @@ class Home extends React.Component{
         )
     }
 }
-export default Home;
+export default App;
 ```
