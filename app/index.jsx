@@ -11,10 +11,11 @@ import RouterMap from './router/routerMap';
 // 性能测试
 import Perf from 'react-addons-perf';
 
-if(__DEV__){
+
+// 如果开发  引用性能测试
+if(process.env.NODE_ENV=='development'){
 	window.Perf=Perf;
 }
-
 
 render(
 	<RouterMap />,

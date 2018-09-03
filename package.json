@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --progress --colors",
-    "build": "rm -rf ./build && webpack --mode production --config ./webpack.production.config.js --progress --colors"
+    "start": "webpack-dev-server --progress --colors --mode development",
+    "build": "rm -rf ./build && webpack --config ./webpack.production.config.js --progress --colors --mode production"
   },
   "author": "",
   "license": "ISC",
@@ -31,12 +31,12 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "react-addons-perf": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.6.2"
   },
   "dependencies": {
     "react": "^15.6.2",
-    "react-addons-perf": "^15.4.2",
-    "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"

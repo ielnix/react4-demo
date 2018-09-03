@@ -58,15 +58,12 @@ module.exports={
 		// 定义为生产环境，编辑React时压缩至最小
 		new webpack.DefinePlugin({
 			'process.env':{
-				'NODE_ENV':JSON.stringify(process.env.NODE_ENV)
+				'NODE_ENV':JSON.stringify('production')
 			}
 		}),
 		// 为组件分配id 通过这个插件webpack可以分析和优先考虑最多的模块，并为它们分配最小的id
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		
-		new webpack.DefinePlugin({
-			__DEV__:JSON.stringify(JSON.parse((process.env.NODE_ENV == 'dev') || 'false'))
-		}),
 		new webpack.LoaderOptionsPlugin({
 			options: {
 				postcss: function () {
@@ -80,7 +77,11 @@ module.exports={
         minimizer: [
             new UglifyJsPlugin({
                 uglifyOptions: {
-                    compress: false
+                    compress: false,
+                    warnings:false,
+                    output: {
+				        comments: false,
+				     }
                 }
             })
         ]

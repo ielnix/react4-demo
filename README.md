@@ -101,6 +101,22 @@ module.exports = {
 }
 ```
 
+5. 设置mode,定义全局变量
+
+```
+//package.json
+
+--mode development
+--mode production
+
+//webpack.config.js
+new webpack.DefinePlugin({
+    'process.env':{
+        'NODE_ENV':JSON.stringify('development')
+    }
+})
+```
+
 [react入门简介](https://segmentfault.com/a/1190000012921279)
 
 #### 事件
@@ -218,3 +234,4 @@ class App extends React.Component{
 }
 export default App;
 ```
+

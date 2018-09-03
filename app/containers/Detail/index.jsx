@@ -9,7 +9,10 @@ class Detail extends React.Component{
 	
 	render(){
 		return(
-			<div>Detail</div>
+			<div>
+				<div>路由地址：{this.props.match.url}</div>
+				<div>路由携带参数：{this.props.match.params.id}</div>
+			</div>
 		)
 	}
 }

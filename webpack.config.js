@@ -34,9 +34,10 @@ module.exports = {
             url: 'http://localhost:8080'
         }),
         new webpack.DefinePlugin({
-            __DEV__: JSON.stringify(JSON.parse((process.env.NODE_ENV == 'dev') || 'false'))
+            'process.env':{
+                'NODE_ENV':JSON.stringify('development')
+            }
         }),
-
 		new webpack.LoaderOptionsPlugin({
 			options: {
 				postcss: function () {
