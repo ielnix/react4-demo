@@ -1,5 +1,9 @@
 ### react-demo
 
+#### 技术栈
+
+react + react-router + webpack 
+
 #### 项目目的
 
 记录配置webpack和学习react中的问题。
